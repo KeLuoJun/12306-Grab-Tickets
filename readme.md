@@ -49,6 +49,8 @@ pip install -r requirements.txt
 
 1. **修改配置文件**  
    打开 `config/settings.py` 文件，根据需要修改起始站、目的站、购票日期、抢票时间、车次配置等信息。
+   其中，起始站和目的站需要的是cookie值，cookie值可以在12306官网的登录页面中获取，`_jc_save_fromStation`为起始站，`_jc_save_toStation`为目的站
+   ![车站cookie值获取](./data/cookie.png)
 
 2. **启动抢票程序**
 
@@ -57,9 +59,13 @@ pip install -r requirements.txt
    ```bash
    python core/main.py
    ```
+   运行后需要在浏览器上扫码登录
+   ![扫码登录](./data/login.png)
+   
 
 3. **等待抢票结果**  
    程序会在设定的时间执行抢票操作，并在成功或失败时发送邮件通知。
+   ![邮件通知](./data/email.jpg)
 
 ## 注意事项
 
@@ -67,10 +73,5 @@ pip install -r requirements.txt
 - 抢票过程中，请勿关闭浏览器窗口，以免影响抢票流程。
 - 如果遇到问题，请查看日志文件 `app.log` 获取更多信息。
 
-## 联系方式
 
-如有任何问题或建议，请联系：[联系邮箱]
 
----
-
-希望这个README文档能帮助你更好地理解和使用这个项目。祝你抢票顺利！
