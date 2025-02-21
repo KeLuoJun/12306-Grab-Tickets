@@ -3,6 +3,7 @@
 ## 项目简介
 
 这是一个用于自动抢购12306火车票的Python脚本。通过Selenium库模拟浏览器操作，定时查询并尝试预订指定的车次。抢票成功后会发送邮件通知。
+![demo](./data/demo.gif)
 
 ## 项目结构
 
@@ -54,10 +55,15 @@ pip install -r requirements.txt
 
 2. **启动抢票程序**
 
-   运行以下命令启动抢票程序：
+   Windows用户可运行以下命令启动抢票程序：
 
    ```bash
    python core/main.py
+   ```
+
+   Linux用户可运行以下命令启动抢票程序：
+   ```bash
+   bash run.sh
    ```
    运行后需要在浏览器上扫码登录
    ![扫码登录](./data/login.png)
