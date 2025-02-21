@@ -27,7 +27,6 @@ class Byticket(object):
     ticket_url = "https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc"
     login_url = "https://kyfw.12306.cn/otn/resources/login.html"
     initmy_url = "https://kyfw.12306.cn/otn/view/index.html"
-    # buy_url = "https://kyfw.12306.cn/otn/confirmPassenger/initDc"
 
     def __init__(self):
         options = Options()
@@ -66,8 +65,6 @@ class Byticket(object):
 
     def start(self):
         try:
-            # self.login()
-        
             # 跳转到购票页面
             self.driver.get(self.ticket_url)
             self.set_cookies()
@@ -88,11 +85,6 @@ class Byticket(object):
                     # 获取所有预订按钮
                     book_btns = self.wait.until(
                         EC.presence_of_all_elements_located((By.XPATH, '//tbody[@id="queryLeftTable"]/tr/td[@class="no-br"]'))
-                    )
-
-                    # 获取所有车次
-                    trains = self.wait.until(
-                        EC.presence_of_all_elements_located((By.XPATH, '//a[@class="number"]'))
                     )
 
                     if self.order == 0:
