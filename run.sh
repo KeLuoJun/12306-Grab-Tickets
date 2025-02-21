@@ -1,0 +1,1 @@
+nohup python3 core/main.py &> app.log &
