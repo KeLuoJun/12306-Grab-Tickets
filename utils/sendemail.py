@@ -33,6 +33,6 @@ def mail(title, message):
 if __name__ == '__main__':
     ret = mail('Test', 'Test')
     if ret:
-        print("邮件发送成功")
+        print("邮件发送成功!")
     else:
-        print("邮件发送失败")
+        print("邮件发送失败!")
